@@ -24,9 +24,11 @@ class HomeAdapter :
                     binding.author.text = it.byline
                     binding.date.text = it.updated?.toDateFormat("yyyy-MM-dd HH:mm:ss",
                         "yyyy-MM-dd")
-                    val url = it.media?.get(0)?.mediaMetaData?.get(0)?.url
-                    if (url != null) {
-                        Log.d("image url", url)
+                    if(it.media?.size!! > 0) {
+                        val url = it.media?.get(0)?.mediaMetaData?.get(0)?.url
+                        if (url != null) {
+                            Log.d("image url", url)
+                        }
                     }
                 }
 
