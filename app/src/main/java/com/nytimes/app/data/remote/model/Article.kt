@@ -2,9 +2,7 @@ package com.nytimes.app.data.remote.model
 
 import com.google.gson.annotations.Expose
 import com.google.gson.annotations.SerializedName
-import javax.annotation.Generated
 
-@Generated("jsonschema2pojo")
 data class Article(
     @SerializedName("uri")
     @Expose
