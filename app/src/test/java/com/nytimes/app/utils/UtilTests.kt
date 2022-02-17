@@ -1,5 +1,9 @@
-package com.nytimes.app
+package com.nytimes.app.utils
 
+import com.nytimes.app.BuildConfig
+import com.nytimes.app.data.remote.model.Article
+import com.nytimes.app.utils.Resource
+import com.nytimes.app.utils.Status
 import com.nytimes.app.utils.toDateFormat
 import org.junit.Test
 
@@ -11,7 +15,10 @@ import org.junit.Assert.*
  * See [testing documentation](http://d.android.com/tools/testing).
  * @author Hassan Jamil
  */
-class BuildUnitTest {
+class UtilTests {
+    /*
+    BUILD TESTS
+     */
     @Test
     fun testBuild() {
         assertEquals("com.nytimes.app", BuildConfig.APPLICATION_ID)
@@ -21,5 +28,26 @@ class BuildUnitTest {
         assertEquals("1.0", BuildConfig.VERSION_NAME)
         assertEquals("OQcEo9fdy3pn8YA5xt5Fow5RyU4bH3mE", BuildConfig.API_KEY)
         assertEquals("https://api.nytimes.com/svc/mostpopular/v2/mostviewed/", BuildConfig.BASE_URL)
+    }
+
+    /*
+    UTILITY TESTS
+     */
+    @Test
+    fun testDateConversion() {
+        val actual = "2022-02-08 14:08:30".toDateFormat("yyyy-MM-dd HH:mm:ss", "yyyy-MM-dd")
+        assertEquals("2022-02-08", actual)
+    }
+
+    @Test
+    fun testResource() {
+        assertNotNull(Resource.success(Article(title = "ABC")))
+        assertNull(Resource.error("Exception", null).data)
+        assertNull(Resource.loading(null).message)
+    }
+
+    @Test
+    fun testStatus() {
+        assertEquals(Status.ERROR.ordinal, 1)
     }
 }
