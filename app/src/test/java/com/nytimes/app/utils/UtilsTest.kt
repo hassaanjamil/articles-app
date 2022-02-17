@@ -15,7 +15,7 @@ import org.junit.Assert.*
  * See [testing documentation](http://d.android.com/tools/testing).
  * @author Hassan Jamil
  */
-class UtilTests {
+class UtilsTest {
     /*
     BUILD TESTS
      */

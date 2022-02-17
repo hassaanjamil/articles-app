@@ -44,11 +44,11 @@ In this base package, there are:
 I have wrote basic unit tests (exists in androidTest/test packages under src package/directory) which is convering stats below:
 Package: all classes
 
-| Classes %    | Methods %      | Lines %        |
-| ------------ | -------------- | -------------- |
-| 12.2% (6/49) | 13.1% (23/175) | 15.2% (49/322) |
+| Classes %     | Methods %      | Lines %         |
+| ------------- | -------------- | --------------- |
+| 27.8% (10/36) | 33.3% (42/126) | 	38.8% (83/214) |
 
-I have used Android Studio built-in coverage feature to generate the report which you can also generate using the method mentioned below:
+I have used Android Studio's built-in coverage feature to generate the report which you can also generate using the method mentioned below:
 
 1. The very first thing you need to do is to run all the unit tests combine or at once for what you need to define a run configuration for it you can follow the guidelines mentioned [here](https://stackoverflow.com/a/69453681/3459944), You can also run a test file by right clicking it and run the tests, you will get results in console.
 2. After selecting the configuration you can hit the Android Studio option "Run with Converage", very right to Run and Debug options.
